@@ -43,9 +43,9 @@ public class Funciones {
         int pos = Integer.parseInt(JOptionPane.showInputDialog("\nIntroduce el Nº de el producto a visualizar"));
         
         if (pos > productos.size()){
-            System.out.format("\nNo existe el producto Nº %d", pos);
+            Display.window("No existe el producto Nº " + pos);
         } else {
-            System.out.format("\nProducto seleccionado (%s), Precio: %.2f", productos.get(pos-1).getNombre(), productos.get(pos-1).getPrecio());
+            Display.window("Producto seleccionado (" + productos.get(pos-1).getNombre() + "), Precio: " + productos.get(pos-1).getPrecio());
         }
         
     }
@@ -70,11 +70,9 @@ public class Funciones {
         int pos = Integer.parseInt(JOptionPane.showInputDialog("\nIntroduce el Nº de producto"));
         
         if (pos > productos.size()){
-            
-            System.out.format("\nNo existe el producto Nº %d", pos);
+            Display.window("No existe el producto Nº " + pos);
         } else {
-            
-            System.out.format("\nProducto seleccionado (%s), Precio: %.2f", productos.get(pos-1).getNombre(), productos.get(pos-1).getPrecio());
+            Display.window("Producto seleccionado (" + productos.get(pos-1).getNombre() + "), Precio: " + productos.get(pos-1).getPrecio());
             productos.get(pos-1).elaborando();
         }
         
